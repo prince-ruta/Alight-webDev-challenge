@@ -39,6 +39,12 @@ ul {
   padding: 5px;
 }
 
+.grid-icon {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+}
 /* Styles for the footer bar */
 .footerBar {
   height: 10vh;
@@ -240,11 +246,14 @@ input:focus {
   border: 0;
   background: transparent;
   outline: none;
-  padding: 0 8px;
+  padding-right: 20px;
   width: 24px;
   line-height: 44px;
-  color: #4285F4;
-  cursor: pointer;
+}
+
+.google-mic {
+  width: 35px;
+  height: 35px;
 }
 
 /* Styles for the camera icon */
@@ -253,8 +262,12 @@ input:focus {
   align-items: center;
   padding-right: 18px;
   height: 46px;
-  color: #4285F4;
   cursor: pointer;
+}
+
+.google-camera {
+  width: 35px;
+  height: 35px;
 }
 
 /* Hover effect for search bar */

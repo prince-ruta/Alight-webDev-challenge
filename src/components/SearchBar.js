@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faMicrophone, faCamera } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
+import googleCamera from '../image/google-camera.png';
+import googleMic from '../image/google-mic.png'
 
 /**
  * SearchBar component will allow users to input a search query
@@ -42,10 +44,10 @@ export const SearchBar = ({ setResults }) => {
         onChange={(e) => handleChange(e.target.value)}
       />
       <div className='microphone-icon'>
-        <FontAwesomeIcon icon={faMicrophone} />
+        <img src={googleMic} alt="" className='google-mic'/>
       </div>
       <div className='camera-icon'>
-        <FontAwesomeIcon icon={faCamera} />
+        <img src={googleCamera} alt="" className='google-camera'/>
       </div>
     </div>
   );
