@@ -1,38 +1,364 @@
-.App {
-  text-align: center;
+/* Reset default margin, padding, and prevent horizontal overflow */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Styles for the sign-in button */
+.signin-button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Remove default list styling */
+ul {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Styles for the top navigation bar */
+.topNav {
+  display: flex;
+  justify-content: end;
+  padding: 0 10px;
+  height: 10vh;
+}
+
+/* Containers within top navigation bar */
+.topNav-firstMiddle-container,
+.topNav-secondMiddle-container {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Padding for list items within top navigation bar */
+.topNav li {
+  padding: 5px;
+}
+
+/* Styles for the footer bar */
+.footerBar {
+  height: 10vh;
+  bottom: 0;
+  background-color: #171717;
+  position: fixed;
+  width: 100%;
+}
+
+/* Footer content alignment and styling */
+.bottom-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+/* Styles for the first footer section */
+.footer-one ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding-left: 15px;
+}
+
+/* Styles for the second footer section */
+.footer-two ul {
+  display: flex;
+  gap: 2rem;
+}
+
+/* General link styling */
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+/* Hover effect for links */
+a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* Common styles for top navigation and footer bar */
+.topNav, .footerBar {
+  color: aliceblue;
+  gap: 1rem;
+}
+
+/* Centered main content styling */
+.centered-main {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  padding-left: 0;
 }
 
-.App-link {
-  color: #61dafb;
+/* Styles for language options */
+.languages-offered {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #fff;
+  line-height: 28px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Styles for language links */
+.languages-offered a {
+  display: flex;
+  text-decoration: none;
+  color: #5AA5F8;
+}
+
+/* Hover effect for language links */
+.languages-offered a:hover {
+  display: flex;
+  text-decoration: underline;
+  color: #5AA5F8;
+}
+
+/* Styles for button container */
+.buttons {
+  height: 70px;
+  padding-top: 18px;
+}
+
+/* Styles for buttons */
+.buttons button {
+  background-color: #303134;
+  border: 1px solid #303134;
+  border-radius: 4px;
+  color: #e8eaed;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hover effect for buttons */
+.buttons button:hover {
+  border: 1px solid #515559;
+}
+
+/* Styles for the search bar */
+.searchBar {
+  display: flex;
+  z-index: 3;
+  position: relative;
+  min-height: 44px;
+  background: #202124;
+  border: 1px solid #5f6368;
+  box-shadow: none;
+  border-radius: 24px;
+  margin: 0 auto;
+  width: 30%;
+}
+
+/* Styles for the search bar input field */
+.searchBar input {
+  resize: none;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: #e8eaed;
+  word-wrap: break-word;
+  outline: none;
+  display: flex;
+  -webkit-tap-highlight-color: transparent;
+  width: 90%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Focus effect for input fields */
+input:focus {
+  outline: none;
+  padding: 8px;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Logo container styling */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 92px;
+  min-height: 150px;
+  height: calc(100% - 560px);
+  max-height: 290px;
+  height: 25vh;
+}
+
+/* Styles for the Google logo */
+.google-logo {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  width: auto;
+  max-height: 92px;
+  position: relative;
+  height: 100%;
+  margin-top: auto;
+}
+
+/* Styles for the search icon */
+.search-icon {
+  display: flex;
+  align-items: center;
+  padding-right: 13px;
+  padding-left: 14px;
+  height: 46px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Styles for the microphone icon */
+.microphone-icon {
+  flex: 1 0 auto;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  outline: none;
+  padding: 0 8px;
+  width: 24px;
+  line-height: 44px;
+  color: #4285F4;
+  cursor: pointer;
+}
+
+/* Styles for the camera icon */
+.camera-icon {
+  display: flex;
+  align-items: center;
+  padding-right: 18px;
+  height: 46px;
+  color: #4285F4;
+  cursor: pointer;
+}
+
+/* Hover effect for search bar */
+.searchBar:hover {
+  background-color: #323235;
+  border: 1px solid #323235;
+}
+
+/* Styles for country location display */
+.country-location {
+  padding: 15px 30px;
+  border-bottom: 1px solid #313335;
+  font-size: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Styles for profile photo */
+.profile-photo {
+  content: "";
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  left: -4px;
+  right: -4px;
+  -webkit-background-size: 32px 32px;
+  background-size: 32px 32px;
+  border: 0;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: block;
+  margin: 0px;
+  position: relative;
+  height: 32px;
+  width: 32px;
+  z-index: 0;
+}
+
+/* Container padding within top navigation */
+.topNav-container {
+  padding: 0 5px;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .topNav {
+    display: flex;
+    justify-content: space-between;
   }
-  to {
-    transform: rotate(360deg);
+  .searchBar {
+    width: 90%;
+  }
+  .buttons {
+    display: none;
+  }
+  .languages-offered {
+    padding-top: 10px;
+  }
+  .footerBar {
+    height: 18vh;
+  }
+  .bottom-footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-two {
+    padding-left: 30px;
+  }
+}
+
+/* Media query for landscape orientation with a maximum width of 768px */
+@media (max-width: 768px) and (orientation: landscape) {
+  .footerBar {
+    height: 35vh;
+    bottom: 0;
+    background-color: #171717;
+    position: relative;
+    width: 100%;
+  }
+  .bottom-footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .centered-main {
+    height: 100vh;
+  }
+}
+
+/* Media query for landscape orientation with a maximum width of 1024px */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .footerBar {
+    height: 35vh;
+    bottom: 0;
+    background-color: #171717;
+    position: relative;
+    width: 100%;
+  }
+  .bottom-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+  .centered-main {
+    height: 100vh;
   }
 }

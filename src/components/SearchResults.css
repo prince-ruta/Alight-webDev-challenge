@@ -1,0 +1,23 @@
+.results-list {
+    width: 30%;
+    max-height: 250px;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: #303134;
+    border-radius: 10px;
+    border: none;
+    overflow-y: scroll;
+}
+.search-results-list {
+    padding: 10px 20px;
+}
+.search-results-list:hover {
+    background-color: #343536;
+}
+
+@media (max-width: 768px) {
+    .results-list {
+        width: 85%;
+    }
+}
